@@ -1,0 +1,43 @@
+.imginner{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+}
+
+.img{
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.img:hover{
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+}
+
+.imgbox{
+  width: 270px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction : column
+}
+
+
+.btn--orange{
+  margin: 10px;
+  padding: 5px;
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover{
+  color: #fff;
+  background: #f56500;
+}
+
+.btn--radius {
+   border-radius: 100vh;
+}

@@ -1,0 +1,16 @@
+<div class="home-tweet-box tweet-box-component tweet-user">
+  <input type='file' accept="image/*" (change)="onChangeInput($event)">
+</div>
+<br />
+<input #titledom type="text" (input)="inputChange(titledom.value)" value={{title}} > <br /><br />
+<button (click)="confirm()" class="btn btn--orange btn--radius" [disabled]="!uploadImg">アップロード</button>
+
+<div class="imginner">
+  <div class="imgbox" *ngFor="let img of imageSrc; index as i">
+    <img class="img" [src]="img.img" alt="" (click)="onClick(img.img)"/>
+    <span>{{img.title}}</span>
+    <span (click)="favAdd(i)" class="btn btn--orange btn--radius" >❤️{{img.favrite}}</span>
+  </div>
+</div>
+
+<app-image-modal *ngIf="modalEventObservable$ | async" [img]="imgModal" (closeEvent)="close()"></app-image-modal>
